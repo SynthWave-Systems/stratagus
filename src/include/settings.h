@@ -260,12 +260,12 @@ struct Settings {
 		UserGameSettings = bs.to_ulong();
 	}
 
-	std::uint32_t getBitfield() const
+	uint32_t getBitfield() const
 	{
 		return NoFogOfWar | (Inside << 1) | (AiExplores << 2) | (SimplifiedAutoTargeting << 3)
 		     | (AiChecksDependencies << 4) | (AllyDepositsAllowed << 5) | (UserGameSettings << 6);
 	}
-	void setBitfield(std::uint32_t bitfield)
+	void setBitfield(uint32_t bitfield)
 	{
 		NoFogOfWar = bitfield & 1;
 		Inside = (bitfield >> 1) & 0x1;
