@@ -601,7 +601,7 @@ bool CTileset::isEquivalentTile(unsigned int tile1, unsigned int tile2) const
 **  @return				vector of tile indices of tiles in the same subslot
 **
 */
-std::vector<tile_index> CTileset::getIdenticalTiles(tile_index tileIndex) const
+std::vector<tile_index> CTileset::getAllTilesOfTheSameKindAs(tile_index tileIndex) const
 {
 	auto calcRangeBoundary = [tileIndex, this](int dir) -> tile_index 
 	{
